@@ -1,66 +1,84 @@
-## Foundry
+# Foundry Mode Template
+
+## Foundry Project for Deployment and Verification of Contracts on the Mode Network
+
+This Foundry project is designed as a comprehensive template to streamline the efficient deployment and verification of contracts on the Mode Network. The initial configuration provides a solid framework that accelerates the development process and ensures the successful implementation of smart contracts.
+
+## Deploy and Verify
+
+```shell
+forge create --rpc-url https://sepolia.mode.network --private-key <your-private-key> src/Counter.sol:Counter --verify --verifier blockscout --verifier-url https://sepolia.explorer.mode.network/api\?
+```
+
+## Key features
+
+Predefined Configuration: The project includes an initial configuration ready for deployment, eliminating the complexity associated with setting up the environment.
+
+Deployment Automation: An automated system for deploying contracts on the Mode Network has been integrated, reducing the time required for this critical task.
+
+Verification Tools: Dedicated tools are incorporated to verify the proper execution of contracts, ensuring the desired integrity and functionality.
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
 Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
 ## Documentation
 
 https://book.getfoundry.sh/
 
-## Usage
+## Usefull commands
 
-### Build
+- Build
 
 ```shell
-$ forge build
+forge build
 ```
 
-### Test
+- Test
 
 ```shell
-$ forge test
+forge test
 ```
 
-### Format
+- Format
 
 ```shell
-$ forge fmt
+forge fmt
 ```
 
-### Gas Snapshots
+- Gas Snapshots
 
 ```shell
-$ forge snapshot
+forge snapshot
 ```
 
-### Anvil
+- Anvil
 
 ```shell
-$ anvil
+anvil
 ```
 
-### Deploy
+- Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+forge create --rpc-url https://sepolia.mode.network --private-key <your-private-key> src/Counter.sol:Counter
 ```
 
-### Cast
+- Cast
 
 ```shell
-$ cast <subcommand>
+cast <subcommand>
 ```
 
-### Help
+- Help
 
 ```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+forge --help
+anvil --help
+cast --help
 ```
